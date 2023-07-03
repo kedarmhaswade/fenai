@@ -51,3 +51,18 @@ Linear kernel accuracy is 0.54
 Poly kernel accuracy is 0.44
 
 Jun 30, 2023 - currently there are only 11 chessboards. As of now we need more data.
+
+Jul 3, 2023 - added more handcrafted chessboards. Now there are 136 chessboards and 8767 squares.
+
+With added data, and linear kernel the accuracy improved to about 60%.
+Noticed that there were some bugs in FEN in name-fen-map.csv. Fixed the bugs and accuracy improved to 80%.
+
+I was looking at the confusion matrix to see where the model is going wrong. I noticed that the train-test split does
+not look good and the test set does not contain examples from some classes. I turned the shuffle parameter of
+train_test_split on and now the accuracy is 99%.
+
+With poly kernel, accuracy is 0.98.
+Training takes a long time with rbf kernel. Rbf kernel performs really badly with only 19% accuracy and predicts
+everything to be empty.
+
+Tried linear kernel with test size 40%, 30%, 20% and 10%. Accuracy is 100% for 90-10 split and 0.99 for the rest.

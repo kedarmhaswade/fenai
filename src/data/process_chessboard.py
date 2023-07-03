@@ -12,8 +12,8 @@ NUM_SQUARES_IN_ROW = 8
 NUM_SQUARES_IN_COL = 8
 NUM_VALUES_PER_SQUARE = 32 * 32 * 3
 CHESSBOARD_COLS = list('abcdefgh')
-CLASS_SELECTION_PROB = {'p': 0.3, 'P': 0.3, 'E': 0.025}
-# CLASS_SELECTION_PROB = {}
+# CLASS_SELECTION_PROB = {'p': 0.3, 'P': 0.3, 'E': 0.025}
+CLASS_SELECTION_PROB = {}
 
 def chessboard_squares_gen(output_file_str, img):
     # Break a chessboard image into squares and generate a class for each
